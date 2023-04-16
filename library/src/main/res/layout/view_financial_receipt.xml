@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+<LinearLayout
+    android:id="@+id/linearlayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="186dp" />
+
+        <ImageView
+            android:id="@+id/madaLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/mada_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/retailer_name_ar_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/madaLogo" />
+
+
+        <TextView
+            android:id="@+id/retailer_name_en_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/retailer_name_ar_textview" />
+
+
+        <TextView
+            android:id="@+id/addressArLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/retailer_name_en_textview" />
+
+        <TextView
+            android:id="@+id/addressEnLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressArLine1" />
+
+        <TextView
+            android:id="@+id/addressArLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressEnLine1" />
+
+        <TextView
+            android:id="@+id/addressEnLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressArLine2" />
+
+        <TextView
+            android:id="@+id/merchantPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressEnLine2" />
+
+
+        <TextView
+            android:id="@+id/start_date_ar_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            app:layout_constraintEnd_toStartOf="@id/guide50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/merchantPhone" />
+
+        <TextView
+            android:id="@+id/start_time_ar_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guide50"
+            app:layout_constraintTop_toBottomOf="@+id/merchantPhone" />
+
+            <LinearLayout
+                android:id="@+id/bankInfo1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bankInfo2"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_ar_textview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/bankId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/mid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/aquId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/stan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/appversion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bankInfo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/bankInfo1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_ar_textview">
+
+                <TextView
+                    android:id="@+id/tid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/rrn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tid"
+                    android:layout_alignStart="@+id/tid" />
+            </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/schemaAr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bankInfo1" />
+
+        <TextView
+            android:id="@+id/schemaEn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/schemaAr" />
+
+        <TextView
+            android:id="@+id/transTypeAr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schemaEn" />
+
+
+        <TextView
+            android:id="@+id/transTypeEn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintTop_toBottomOf="@+id/transTypeAr" />
+
+
+        <TextView
+            android:id="@+id/pan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toStartOf="@id/guide50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transTypeEn" />
+
+        <TextView
+            android:id="@+id/panFormatted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guide50"
+            app:layout_constraintTop_toBottomOf="@+id/transTypeEn" />
+
+        <TextView
+            android:id="@+id/transDescAr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/panFormatted" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/transDescAr" />
+
+        <TextView
+            android:id="@+id/transDescEn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+        <TextView
+            android:id="@+id/amountAr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transDescEn" />
+
+
+        <LinearLayout
+            android:id="@+id/naqd"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/amountAr">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/purchase_amount_desc_ar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/naqd_amount_ar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/total_amount_ar"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/purchase_amount_desc_en"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAllCaps="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/naqd_amount_en"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/total_amount_en"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/transactionResultTextAr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/naqd" />
+
+        <TextView
+            android:id="@+id/transactionResultTextEn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/transactionResultTextAr" />
+
+
+        <TextView
+            android:id="@+id/transactionErrorMessageAr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/transactionResultTextEn" />
+
+        <TextView
+            android:id="@+id/transactionErrorMessageEn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/transactionErrorMessageAr" />
+
+        <TextView
+            android:id="@+id/pin_verified_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pin_verified_ar"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transactionErrorMessageEn" />
+
+        <TextView
+            android:id="@+id/pin_verified_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pin_verified_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pin_verified_ar" />
+
+
+        <TextView
+            android:id="@+id/device_verified_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/device_verified_ar"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/pin_verified_en" />
+
+        <TextView
+            android:id="@+id/device_verified_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/device_verified_en"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/device_verified_ar" />
+
+        <TextView
+            android:id="@+id/signarure_verified_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signarure_verified_ar"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/device_verified_en" />
+
+        <TextView
+            android:id="@+id/signarure_verified_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signarure_verified_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signarure_verified_ar" />
+
+        <TextView
+            android:id="@+id/no_cvm_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_cvm_ar"
+            android:textAlignment="center"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signarure_verified_en" />
+
+        <TextView
+            android:id="@+id/no_cvm_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_cvm_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/no_cvm_ar" />
+
+        <TextView
+            android:id="@+id/client_signature_below_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/client_signature_below_ar"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/no_cvm_en" />
+
+        <TextView
+            android:id="@+id/client_signature_below_en"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/client_signature_below_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_signature_below_ar" />
+
+        <TextView
+            android:id="@+id/customer_signature_below_ar"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_signature_below_ar"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_signature_below_en" />
+
+        <TextView
+            android:id="@+id/customer_signature_below_en"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_signature_below_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_signature_below_ar" />
+
+
+        <TextView
+            android:id="@+id/x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="X"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_signature_below_en" />
+
+        <TextView
+            android:id="@+id/sign_pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line"
+            android:gravity="bottom"
+            android:text="@string/empty_line"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/x"
+            app:layout_constraintTop_toBottomOf="@+id/customer_signature_below_en" />
+
+        <TextView
+            android:id="@+id/add_amount_to_customer_ar"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/add_amount_to_customer_ar"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_pad" />
+
+        <TextView
+            android:id="@+id/add_amount_to_customer_en"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_amount_to_customer_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_amount_to_customer_ar" />
+
+        <TextView
+            android:id="@+id/approve_deduct_ar"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/approve_deduct_ar"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_amount_to_customer_en" />
+
+        <TextView
+            android:id="@+id/approve_deduct_en"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/approve_deduct_en"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/approve_deduct_ar" />
+
+
+        <TextView
+            android:id="@+id/auth_value2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guide50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/approve_deduct_en" />
+
+        <TextView
+            android:id="@+id/auth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/approval_code"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guide50"
+            app:layout_constraintTop_toBottomOf="@+id/approve_deduct_en" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/approval_code_en"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guide50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/auth" />
+
+        <TextView
+            android:id="@+id/auth_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guide50"
+            app:layout_constraintTop_toBottomOf="@+id/auth" />
+
+
+        <TextView
+            android:id="@+id/operation_date_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            app:layout_constraintEnd_toStartOf="@id/guide50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/auth_value" />
+
+        <TextView
+            android:id="@+id/operation_time_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guide50"
+            app:layout_constraintTop_toBottomOf="@+id/auth_value" />
+
+
+        <TextView
+            android:id="@+id/thanks_for_using_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/thanks_for_using"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/operation_time_textview" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/thanks_for_using_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thanks_for_using_ar">
+
+            <TextView
+                android:text="@string/thanks_for_using_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/mada" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/keep_receipt_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/keep_receipt_ar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thanks_for_using_en" />
+
+        <TextView
+            android:id="@+id/keep_receipt_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/keep_receipt_en"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keep_receipt_ar" />
+
+        <TextView
+            android:id="@+id/merch_copy_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/merch_copy_ar"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keep_receipt_en" />
+
+        <TextView
+            android:id="@+id/merch_copy_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/merch_copy_en"
+            android:textAllCaps="true"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/merch_copy_ar" />
+
+        <TextView
+            android:id="@+id/client_copy_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/client_copy_ar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/merch_copy_en" />
+
+        <TextView
+            android:id="@+id/client_copy_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/client_copy_en"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_copy_ar" />
+
+        <TextView
+            android:id="@+id/leapTagInfoLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/client_copy_en" />
+
+        <TextView
+            android:id="@+id/leapTagInfoLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/leapTagInfoLine1" />
+
+        <TextView
+            android:id="@+id/leapTagInfoLine3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/leapTagInfoLine2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+</ScrollView>
